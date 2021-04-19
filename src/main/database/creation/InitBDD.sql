@@ -17,7 +17,7 @@ insert into product (id, create_date, label, unit_price, currency, weight, heigh
 (nextval('product_id_seq'), '2021-02-08', 'Trottinette', 900, 'EUR', 20, 20),
 (nextval('product_id_seq'), '2021-02-09', 'Sapin', 50, 'EUR', 5, 10);
 
-insert into merchant_product (id, affiliation_id, merchant_id, product_id, affectation_date) values
+insert into merchant_product (id, affiliation_id, merchant_id, product_id, affiliation_date) values
     (nextval('merchant_product_id_seq'),
         concat((select id from merchant where name = 'Pierric' limit 1),'_',(select id from product where label = 'Drone' limit 1)),
         (select id from merchant where name = 'Pierric' limit 1),
