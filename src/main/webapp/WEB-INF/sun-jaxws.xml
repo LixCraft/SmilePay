@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
     <endpoint
-            name="MerchantServiceImpl"
+            name="cServiceImpl"
             implementation="implementation.MerchantServiceImpl"
             url-pattern="/ws/merchant"/>
     <endpoint
-            name="ProductServiceImple"
+            name="ProductServiceImpl"
             implementation="implementation.ProductServiceImpl"
             url-pattern="/ws/product"/>
+    <endpoint
+            name="AddressServiceImpl"
+            implementation="implementation.AddressServiceImpl"
+            url-pattern="/ws/address"/>
+    <endpoint
+            name="MerchantProductServiceImpl"
+            implementation="implementation.MerchantProductServiceImpl"
+            url-pattern="/ws/merchantproduct"/>
 </endpoints>

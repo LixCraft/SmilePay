@@ -5,7 +5,6 @@ import model.Product;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
-import java.util.ArrayList;
 
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.RPC)
@@ -18,8 +17,11 @@ public interface ProductService {
     Product[] getListProduct();
 
     @WebMethod
+    Product getProduct(Integer id);
+
+    @WebMethod
     Product modifyProduct(Product product);
 
     @WebMethod
-    boolean deleteProduct(Integer productId);
+    void deleteProduct(Product product);
 }

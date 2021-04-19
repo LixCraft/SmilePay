@@ -5,15 +5,10 @@ import model.Merchant;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
-import java.util.ArrayList;
-import java.util.List;
 
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface MerchantService {
-
-    @WebMethod
-    String isRunning();
 
     @WebMethod
     Merchant createMerchant(Merchant merchant);
@@ -22,8 +17,11 @@ public interface MerchantService {
     Merchant[] getListMerchant();
 
     @WebMethod
+    Merchant getMerchant(Integer id);
+
+    @WebMethod
     Merchant modifyMerchant(Merchant merchant);
 
     @WebMethod
-    boolean deleteMerchant(Integer merchantId);
+    void deleteMerchant(Merchant merchantId);
 }

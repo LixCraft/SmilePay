@@ -43,6 +43,28 @@
       <version>3.1.0</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>4.3.6.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.2.19</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ma.glasnost.orika</groupId>
+      <artifactId>orika-core</artifactId>
+      <version>1.5.4</version>
+    </dependency>
   </dependencies>
 
   <build>
