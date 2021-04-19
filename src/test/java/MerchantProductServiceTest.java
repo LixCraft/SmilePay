@@ -10,7 +10,6 @@ import service.MerchantProductService;
 import service.MerchantService;
 import service.ProductService;
 
-import javax.xml.crypto.Data;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Endpoint;
 import javax.xml.ws.Service;
