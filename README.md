@@ -1,28 +1,40 @@
 
-# Bank Account Kata (EN)
-_Une version [française est disponible](#bank-account-kata-fr)_
-> This exercice has some flexible implementation and a deadline.  
-> Its purpose is to provide a point of reference for the upcoming technical interview.  
+# Environnement Setting
+> Tomcat 9.0.45.0
+> 
+> Java Compiler 1.8
+> 
+> JDK 1.8.0_281 (Oracle)
+> 
+> Development in IntelliJ IDEA Community 2021.1 (Build 211.6693.111)
+> 
+
+> Webservice API SOAP
+> 
+> Junit 4.11
+> 
+> Hibernate 4.3.6.Final
+> 
+> Database PostgreSql v13.2-2
+> 
+> PGAdmin 5.0
+
+# Database Configuration
+> Database parameters : src/main/resources/hibernate.cfg.xml
+
+# WebService SOAP
+> WebService Endpoint Configuration : 
+> 
+> - src/main/webapp/WEB-INF/sun-jaxws.xml
+> 
+> - src/main/webapp/WEB-INF/web.xml
+> 
+> Local WebService Endpoint URL  : 
+> 
+> - http://localhost:8080/SmilePay/ws/product
 
 ## Instructions
-The [MVP or Minimum Valuable Product](#mvp---minimum-valuable-product) is the mandatory part of the Kata. 
-Yet, you can work on [bonus features](#bonus-features) to show off your skills.  
-In case of missing information, make a choice and stay consistent with it.    
-_Be careful with the size and the message of your commits._
 
-**There is no "right" way to implement this Kata, we're interested in your choices and your technical skills within those constraints.**
-
-### Delivery
-The Kata should be delivered using a [Github](https://github.com) repository, or you can create a *Pull Request* to the [develop](https://github.com/kirinux/ing-bank-account-kata/tree/develop) branch of the [original repository](https://github.com/kirinux/ing-bank-account-kata).  
-Your repository should have: 
-* A branch named as your `trigram` received by mail ; it should contain your final source code.
-* A `readme.md` file, explaining the possible details of your implementation and how to start your project.
-
-### Technical constraints
-* Java@8 minimum
-* JUnit@5 + AssertJ@3
-
-## The Kata
 ### MVP - Minimum Valuable Product
 
 #### User Story 1
