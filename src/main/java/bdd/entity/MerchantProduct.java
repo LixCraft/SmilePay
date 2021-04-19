@@ -1,7 +1,6 @@
 package bdd.entity;
 
 import lombok.Data;
-import org.hibernate.annotations.Formula;
 
 import javax.persistence.*;
 import java.util.Date;

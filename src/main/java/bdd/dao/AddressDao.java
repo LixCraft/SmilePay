@@ -1,14 +1,12 @@
 package bdd.dao;
 
 import bdd.entity.Address;
-import bdd.entity.Merchant;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-import java.util.Date;
 import java.util.List;
 
 public class AddressDao implements AddressDaoInterface<Address, Integer> {
@@ -70,7 +68,7 @@ public class AddressDao implements AddressDaoInterface<Address, Integer> {
         Integer merchantId = (Integer) getCurrentSession().save(entity);
         tx.commit();
         entity.setId(merchantId);
-        return  entity;
+        return entity;
     }
 
     @Override

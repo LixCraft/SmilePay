@@ -1,6 +1,5 @@
 package bdd.dao;
 
-import bdd.entity.Merchant;
 import bdd.entity.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,7 +10,7 @@ import org.hibernate.cfg.Configuration;
 import java.util.Date;
 import java.util.List;
 
-public class ProductDao implements ProductDaoInterface<Product, Integer>{
+public class ProductDao implements ProductDaoInterface<Product, Integer> {
 
     private Session currentSession;
 
@@ -71,7 +70,7 @@ public class ProductDao implements ProductDaoInterface<Product, Integer>{
         Integer productId = (Integer) getCurrentSession().save(entity);
         tx.commit();
         entity.setId(productId);
-        return  entity;
+        return entity;
     }
 
     @Override

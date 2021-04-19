@@ -1,7 +1,6 @@
 package implementation;
 
 import bdd.service.MerchantDatabaseService;
-import ma.glasnost.orika.Mapper;
 import mapper.MapperUtils;
 import model.Merchant;
 import service.MerchantService;
@@ -25,7 +24,7 @@ public class MerchantServiceImpl implements MerchantService {
     public Merchant[] getListMerchant() {
         MerchantDatabaseService service = new MerchantDatabaseService();
         List<bdd.entity.Merchant> merchantDatabaseList = service.findAll();
-        if(merchantDatabaseList != null){
+        if (merchantDatabaseList != null) {
             List<Merchant> merchantList = MapperUtils.getBasicMapper(bdd.entity.Merchant.class, Merchant.class).mapAsList(service.findAll(), Merchant.class);
             return merchantList.toArray(new Merchant[0]);
         } else {
@@ -37,7 +36,7 @@ public class MerchantServiceImpl implements MerchantService {
     public Merchant getMerchant(Integer id) {
         MerchantDatabaseService service = new MerchantDatabaseService();
         bdd.entity.Merchant merchantDatabase = service.getById(id);
-        if(merchantDatabase != null){
+        if (merchantDatabase != null) {
             return MapperUtils.getBasicMapper(bdd.entity.Merchant.class, Merchant.class).map(service.getById(id), Merchant.class);
         } else {
             return new Merchant();

@@ -24,7 +24,7 @@ public class AddressServiceImpl implements AddressService {
     public Address[] getListAddress() {
         AddressDatabaseService service = new AddressDatabaseService();
         List<bdd.entity.Address> addressDatabaseList = service.findAll();
-        if(addressDatabaseList != null){
+        if (addressDatabaseList != null) {
             List<Address> addressList = MapperUtils.getBasicMapper(bdd.entity.Address.class, Address.class).mapAsList(service.findAll(), Address.class);
             return addressList.toArray(new Address[0]);
         } else {
@@ -36,7 +36,7 @@ public class AddressServiceImpl implements AddressService {
     public Address getAddress(Integer id) {
         AddressDatabaseService service = new AddressDatabaseService();
         bdd.entity.Address addressDatabase = service.getById(id);
-        if(addressDatabase != null){
+        if (addressDatabase != null) {
             return MapperUtils.getBasicMapper(bdd.entity.Address.class, Address.class).map(service.getById(id), Address.class);
         } else {
             return new Address();

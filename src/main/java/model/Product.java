@@ -16,5 +16,5 @@ public class Product implements Serializable {
     private String currency;
     private Integer weight;
     private Integer height;
-    
+
 }

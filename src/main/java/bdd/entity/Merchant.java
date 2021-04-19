@@ -30,9 +30,9 @@ public class Merchant {
     private String lastName;
     @Column(name = "birthdate", nullable = false)
     private Date birthdate;
-    @OneToMany(mappedBy="merchant", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "merchant", cascade = CascadeType.ALL)
     private Set<Address> addresses = new HashSet<>();
-    @OneToMany(mappedBy="merchant", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "merchant", cascade = CascadeType.ALL)
     private Set<MerchantProduct> merchantProducts = new HashSet<>();
 
 }

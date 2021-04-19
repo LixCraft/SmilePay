@@ -9,18 +9,18 @@ public class AddressDatabaseService {
 
     private static AddressDao addressDao;
 
-    public AddressDatabaseService(){
+    public AddressDatabaseService() {
         addressDao = new AddressDao();
     }
 
-    public Address create(Address entryAddress){
+    public Address create(Address entryAddress) {
         addressDao.openCurrentSession();
         Address address = addressDao.create(entryAddress);
         addressDao.closeCurrentSession();
         return address;
     }
 
-    public Address update(Address entryAddress){
+    public Address update(Address entryAddress) {
         addressDao.openCurrentSession();
         Address address = addressDao.update(entryAddress);
         addressDao.closeCurrentSession();
@@ -34,7 +34,7 @@ public class AddressDatabaseService {
         return address;
     }
 
-    public void delete(Address entryAddress){
+    public void delete(Address entryAddress) {
         addressDao.openCurrentSession();
         addressDao.delete(entryAddress);
         addressDao.closeCurrentSession();

@@ -34,6 +34,6 @@ public class Product {
     private Integer weight;
     @Column(name = "height")
     private Integer height;
-    @OneToMany(mappedBy="product")
+    @OneToMany(mappedBy = "product")
     private Set<MerchantProduct> merchantProducts = new HashSet<>();
 }

@@ -13,14 +13,14 @@ public class ProductDatabaseService {
         productDao = new ProductDao();
     }
 
-    public Product create(Product entryProduct){
+    public Product create(Product entryProduct) {
         productDao.openCurrentSession();
         Product merchant = productDao.create(entryProduct);
         productDao.closeCurrentSession();
         return merchant;
     }
 
-    public Product update(Product entryProduct){
+    public Product update(Product entryProduct) {
         productDao.openCurrentSession();
         Product merchant = productDao.update(entryProduct);
         productDao.closeCurrentSession();
@@ -34,7 +34,7 @@ public class ProductDatabaseService {
         return merchant;
     }
 
-    public void delete(Product entryProduct){
+    public void delete(Product entryProduct) {
         productDao.openCurrentSession();
         productDao.delete(entryProduct);
         productDao.closeCurrentSession();

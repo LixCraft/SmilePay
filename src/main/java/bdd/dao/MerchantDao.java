@@ -1,7 +1,6 @@
 package bdd.dao;
 
 import bdd.entity.Merchant;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -71,7 +70,7 @@ public class MerchantDao implements MerchantDaoInterface<Merchant, Integer> {
         Integer merchantId = (Integer) getCurrentSession().save(entity);
         tx.commit();
         entity.setId(merchantId);
-        return  entity;
+        return entity;
     }
 
     @Override

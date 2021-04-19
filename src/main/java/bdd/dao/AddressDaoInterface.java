@@ -3,7 +3,7 @@ package bdd.dao;
 import java.io.Serializable;
 import java.util.List;
 
-public interface AddressDaoInterface <T, Id extends Serializable> {
+public interface AddressDaoInterface<T, Id extends Serializable> {
 
     T create(T entity);
 
@@ -11,7 +11,7 @@ public interface AddressDaoInterface <T, Id extends Serializable> {
 
     T findById(Id id);
 
-    void  delete(T entity);
+    void delete(T entity);
 
     List<T> findAll();
 }

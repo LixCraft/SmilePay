@@ -3,8 +3,6 @@ package bdd.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Data
 @Entity
@@ -31,7 +29,7 @@ public class Address {
     @Column(name = "zipcode", length = 50)
     private String zipcode;
     @ManyToOne
-    @JoinColumn(name ="merchant_id", nullable = false, foreignKey = @ForeignKey(name = "address_merchant_id_fkey"))
+    @JoinColumn(name = "merchant_id", nullable = false, foreignKey = @ForeignKey(name = "address_merchant_id_fkey"))
     private Merchant merchant;
 
 }

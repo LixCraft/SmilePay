@@ -24,5 +24,5 @@ public interface AddressService {
 
     @WebMethod
     void deleteAddress(Address address);
-    
+
 }

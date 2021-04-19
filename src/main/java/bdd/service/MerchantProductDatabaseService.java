@@ -10,18 +10,18 @@ public class MerchantProductDatabaseService {
 
     private static MerchantProductDao merchantProductDao;
 
-    public MerchantProductDatabaseService(){
+    public MerchantProductDatabaseService() {
         merchantProductDao = new MerchantProductDao();
     }
 
-    public MerchantProduct create(MerchantProduct entryMerchantProduct){
+    public MerchantProduct create(MerchantProduct entryMerchantProduct) {
         merchantProductDao.openCurrentSession();
         MerchantProduct merchantProduct = merchantProductDao.create(entryMerchantProduct);
         merchantProductDao.closeCurrentSession();
         return merchantProduct;
     }
 
-    public MerchantProduct update(MerchantProduct entryMerchantProduct){
+    public MerchantProduct update(MerchantProduct entryMerchantProduct) {
         merchantProductDao.openCurrentSession();
         MerchantProduct merchantProduct = merchantProductDao.update(entryMerchantProduct);
         merchantProductDao.closeCurrentSession();
@@ -35,7 +35,7 @@ public class MerchantProductDatabaseService {
         return merchantProduct;
     }
 
-    public void delete(MerchantProduct entryMerchantProduct){
+    public void delete(MerchantProduct entryMerchantProduct) {
         merchantProductDao.openCurrentSession();
         merchantProductDao.delete(entryMerchantProduct);
         merchantProductDao.closeCurrentSession();

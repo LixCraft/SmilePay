@@ -1,8 +1,6 @@
 package bdd.dao;
 
-import bdd.entity.Merchant;
 import bdd.entity.MerchantProduct;
-import bdd.entity.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -73,7 +71,7 @@ public class MerchantProductDao implements MerchantDaoInterface<MerchantProduct,
         Integer merchantProductId = (Integer) getCurrentSession().save(entity);
         tx.commit();
         entity.setId(merchantProductId);
-        return  entity;
+        return entity;
     }
 
     @Override
@@ -103,10 +101,10 @@ public class MerchantProductDao implements MerchantDaoInterface<MerchantProduct,
         return products;
     }
 
-    private String generateAffiliationId(MerchantProduct entity){
+    private String generateAffiliationId(MerchantProduct entity) {
 
-        if(entity.getMerchant() != null && entity.getMerchant().getId() != null
-                && entity.getProduct() != null && entity.getProduct().getId() != null){
+        if (entity.getMerchant() != null && entity.getMerchant().getId() != null
+                && entity.getProduct() != null && entity.getProduct().getId() != null) {
             return entity.getMerchant().getId() + "_" + entity.getProduct().getId();
         } else {
             return null;
