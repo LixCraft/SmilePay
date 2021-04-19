@@ -1,4 +1,9 @@
 
+# Release version in Tag Directory
+> Release 1.0 : Stable version with security dependencies Alert
+> 
+> Release 1.1 : Stable version with fix security dependencies Alert
+
 # Environnement Setting
 > Tomcat 9.0.45.0
 > 
