@@ -35,16 +35,33 @@
 
 ## Instructions
 
-### MVP - Minimum Valuable Product
+#### 1.Install Tomcat
+> Install Tomcat 9.0.45.0 on your computer :
+> 
+> - Home Page : https://tomcat.apache.org/download-90.cgi
+> - Download link : https://downloads.apache.org/tomcat/tomcat-9/v9.0.45/bin/apache-tomcat-9.0.45.zip
 
-#### User Story 1
-> As a bank, deposit money from a customer to his account, is allowed when superior to €0.01
+#### 2.Install PostgreSql/PgAdmin
+> Install Postrges 13.2 on your computer :
+> - Home Page : https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 
-#### User Story 2
-> As a bank, withdraw money from a customer account, is allowed when no overdraft used
+#### 3.Create Database
+> Open your PgAdmin
+> - Create a database and report your configuration database in the project file "src/main/resources/hibernate.cfg.xml" 
+> - Initialize database structure by excuting the sql script : src/main/database/creation/creationBDD.sql
+> - You can initialize the database with samples by executing the sql script : src/main/database/creation/InitBDD.sql
 
-#### User Story 3
-> As a bank, a customer can display its account balance
+#### 4.Import project
+> - Import project to your IDE 
+> - Configure Tomcat Deployement (Context, Port)
+![image](https://user-images.githubusercontent.com/41443590/115268189-4c95e880-a13a-11eb-97fd-4f4f845b089a.png)
+> - Configure your project with JDK 1.8.0_281 (Oracle)
 
-#### User Story 4
-> As a bank, a customer can display its account transactions history
+#### 5.Install
+> - Run maven install to test the project and execute Junit tests
+
+#### 6.Deployment
+> - Deploy your war package on Tomcat
+> 
+#### 7.Deployment
+> - Webservice SOAP description is exposed on : http://localhost:8080/SmilePay/ws/product
