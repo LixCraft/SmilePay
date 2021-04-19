@@ -65,3 +65,17 @@
 > 
 #### 7.Deployment
 > - Webservice SOAP description is exposed on : http://localhost:8080/SmilePay/ws/product
+
+## Description (English)
+
+This application is a SOAP Webservice allowing to manage information about Merchants, Products they manage and their Addresses.
+There is 3 tables which represents theses kind of information.
+A Merchant can manage many products and a Product can be managed by many Merchant.
+In order to modelize this business carateristics, I added a technical table "merchant_product" to realize the "manyToMany" relation between Merchants and Products. This table also store the affiliation information between theses 2 datas.
+
+## Description (Français)
+
+Cette application est un Webservice SOAP permettant de gérer les informations sur les Marchands, les Produits qu'ils gèrent et leurs Adresses.
+Il y a 3 tables qui représentent ces types d'information.
+Un marchand peut gérer de nombreux produits et un produit peut être géré par de nombreux marchands.
+Afin de modéliser cette caratéristique métier, j'ai ajouté une table technique "merchant_product" pour réaliser la relation "manyToMany" entre Marchands et Produits. Cette table stocke également les informations d'affiliation entre ces 2 données.
